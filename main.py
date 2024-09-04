@@ -12,5 +12,10 @@ def incial():
 def cardapio():
     return render_template("cardapio.html")
 
+@app.route("/sobre")
+def sobre():
+    return render_template("sobre.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
