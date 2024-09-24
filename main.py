@@ -4,7 +4,7 @@ app = Flask (__name__)
 
 
 @app.route("/")
-def incial():
+def inicial():
     return render_template("index.html")
 
 
@@ -19,6 +19,11 @@ def sobre():
 @app.route("/contato")
 def contato():
     return render_template("contato.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

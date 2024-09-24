@@ -297,10 +297,10 @@ footer {
         <nav class="navbar">
             <div class="logo">Sempre Doce</div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Cardápio</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="{{ url_for('inicial') }}">Home</a></li>
+                <li><a href="{{ url_for('cardapio') }}">Cardápio</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
             </ul>
         </nav>
     </header>
