@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - Confeitaria Sempre Doce</title>
-    <style>
-        /* Importação de fontes e estilos globais */
+ /* Importação de fontes e estilos globais */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
         * {
@@ -97,7 +90,7 @@
         /* Container */
         .container {
             width: 90%;
-            max-width: 800px;
+            max-width: 400px;
             margin: 50px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8); /* Alterado para 0.8 de opacidade */
@@ -107,12 +100,44 @@
             z-index: 2;
         }
 
-        h2 {
+        h1 {
             text-align: center;
             color:#8B4513;
-            margin-bottom: 20px;
         }
 
+        .input-group {
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .input-group button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .email-btn {
+            background-color: #8B4513;
+        }
+
+        .facebook-btn {
+            background-color: #8B4513;
+        }
+
+        .phone-btn {
+            background-color: #8B4513;
+        }
+
+        .input-group button:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
         footer {
             background-color: #333;
             color: #fff;
@@ -121,41 +146,3 @@
             position: relative;
             z-index: 2;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Sempre Doce</div>
-            <ul class="nav-links">
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Conheça a Confeitaria Sempre Doce</h1>
-                <p>Onde cada doce é feito com amor e dedicação.</p>
-            </div>
-        </section>
-
-        <section class="container">
-            <h2>Sobre a Confeitaria</h2>
-            <p>A Confeitaria Sempre Doce é um lugar onde a paixão por doces se transforma em verdadeiras obras de arte. Fundada com o intuito de proporcionar momentos doces e memoráveis, oferecemos uma variedade de sobremesas feitas com ingredientes de alta qualidade.</p>
-            <p>Nossos confeiteiros são verdadeiros artistas, dedicando-se a cada receita com atenção aos detalhes e um compromisso inabalável com a qualidade. Cada bolo e doce é feito à mão, utilizando técnicas tradicionais e um toque de criatividade.</p>
-            <p>Além disso, acreditamos na importância de usar ingredientes frescos e locais sempre que possível, garantindo que cada produto que oferecemos seja não apenas delicioso, mas também de alta qualidade.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>

@@ -4,291 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio - Confeitaria Sempre Doce</title>
-    <style>
-        /* Importação de fontes */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: 600;
-    color: #8B4513;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #8B4513;
-}
-
-/* Burger Menu */
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.burger span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    margin: 4px;
-    transition: all 0.3s ease;
-}
-
-/* Hero Section */
-.hero {
-    background: url('https://i.pinimg.com/originals/37/34/09/37340962d2b4a66aa807d83abf886f2c.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.hero-content {
-    z-index: 1;
-    max-width: 700px;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    background-color: #8B4513;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #8B4513;
-}
-
-/* About Section */
-.about, .menu, .contact {
-    padding: 60px 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.about h2, .menu h2, .contact h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 36px;
-    color: #8B4513;
-}
-
-.about p {
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 800px;
-    margin: auto;
-}
-
-/* Menu Section */
-.menu-items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.item {
-    flex: 1 1 calc(33.333% - 20px);
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.item:hover {
-    transform: translateY(-5px);
-}
-
-.item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.item h3 {
-    margin: 20px 0 10px 0;
-    font-size: 24px;
-    color:#8B4513;
-}
-
-.item p {
-    padding: 0 20px 20px 20px;
-    font-size: 16px;
-    color: #666;
-}
-
-/* Contact Section */
-.contact form {
-    max-width: 600px;
-    margin: auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    resize: none;
-}
-
-.contact .btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    font-size: 18px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
-        top: 80px;
-        background-color: #fff;
-        flex-direction: column;
-        width: 50%;
-        align-items: center;
-        justify-content: center;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-
-    .nav-links li {
-        margin: 20px 0;
-    }
-
-    .nav-active {
-        transform: translateX(0);
-    }
-
-    .burger {
-        display: flex;
-    }
-
-    .burger.toggle span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .burger.toggle span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger.toggle span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    .menu-items {
-        flex-direction: column;
-    }
-
-    .item {
-        flex: 1 1 100%;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-}
-
-    </style>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/cardapio.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -460,3 +176,74 @@ footer {
                         <h3>Bolo de Mel</h3>
                         <p>R$30,00</p>
                         <button class="btn">Adicionar ao Carrinho</button>
+                    </div>
+                    <!-- Seção de Bebidas --><main>
+        <section class="menu">
+            <div class="container">
+               <h2>Bebidas</h2>
+                <div class="menu-items">
+
+<div class="menu-items">
+    <!-- Bebida 1 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/564x/3d/ed/b3/3dedb3e1ce9509de43d79e7f7e202a61.jpg" alt="Chá Verde">
+        <h3>Milkshake de Morango</h3>
+        <p>R$25,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 2 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/564x/b0/95/0c/b0950c22362a3a30e353bac00bc2ad31.jpg" alt="Limonada">
+        <h3>Milkshake de Chocolate</h3>
+        <p>R$25,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 3 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/564x/a4/a2/7b/a4a27bf704f58bd0441ec95b17dfeaf2.jpg" alt="Chá de Camomila">
+        <h3>Milkshake de Caramelo</h3>
+        <p>R$25,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 4 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/564x/b3/ab/9b/b3ab9b3020e5eca3d83035a8a7bbfbb7.jpg" alt="Suco de Laranja">
+        <h3>Café com leite</h3>
+        <p>R$15,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 5 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/564x/70/5e/d3/705ed37a26efb47337b465f5c12fe54a.jpg" alt="Café Expresso">
+        <h3>Café Expresso</h3>
+        <p>R$15,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 6 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/736x/36/28/78/3628784c99fb805f898dfea06e62543c.jpg" alt="Café com Leite">
+        <h3>Chocolate quente</h3>
+        <p>R$15,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 7 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/736x/fd/26/cd/fd26cd0f42b616870a5b35315834f5ec.jpg" alt="Cappuccino">
+        <h3>Limonada</h3>
+        <p>R$10,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 8 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/736x/68/f9/36/68f93627bfe7d9788d06b577553070f3.jpg" alt="Suco de Abacaxi">
+        <h3>Suco de Morango</h3>
+        <p>R$10,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Bebida 9 -->
+    <div class="item">
+        <img src="https://i.pinimg.com/564x/d7/7c/ad/d77cada156bd747fc870287bd94e063e.jpg" alt="Suco de Maracujá">
+        <h3>Suco de Maracujá</h3>
+        <p>R$10,00</p>
+        <button class="btn">Adicionar ao Carrinho</button>
+    </div>

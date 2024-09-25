@@ -4,73 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Sempre Doce</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 100%;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #d35400;
-        }
-        .input-group {
-            margin: 15px 0;
-        }
-        .input-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-        .input-group input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            font-size: 16px;
-        }
-        .input-group button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 15px;
-            background-color: #d35400;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .input-group button:hover {
-            background-color: #e67e22;
-        }
-    </style>
+    <!-- Importação de Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
 </head>
 <body>
-    <div class="container">
-        <h1>Login - Sempre Doce</h1>
-        <form action="home.html">
-            <div class="input-group">
-                <label for="email">Email ou Número de Celular:</label>
-                <input type="text" id="email" name="email" placeholder="Digite seu email ou número" required>
+<header>
+        <nav class="navbar">
+            <div class="logo">Sempre Doce</div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('inicial') }}">Home</a></li>
+                <li><a href="{{ url_for('cardapio') }}">Cardápio</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="container">
+                <h1>Login - Sempre Doce</h1>
+                <form action="home.html">
+                    <div class="input-group">
+                        <label for="email">Email ou Número de Celular:</label>
+                        <input type="text" id="email" name="email" placeholder="Digite seu email ou número" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit">Entrar</button>
+                    </div>
+                </form>
             </div>
-            <div class="input-group">
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            </div>
-            <div class="input-group">
-                <button type="submit">Entrar</button>
-            </div>
-        </form>
+        </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Sempre Doce - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>

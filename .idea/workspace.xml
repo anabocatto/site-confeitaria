@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97effde7-1af9-4286-a69d-917cfdf467e8" name="Changes" comment="site atualizado">
-      <change afterPath="$PROJECT_DIR$/templates/cadastro.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/cadastro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/cardapio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/contato.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/sobre.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cadastro.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cadastro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cardapio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cardapio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/contato.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contato.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sobre.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/sobre.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +37,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2lZK1zFoLfwDjyPHgA2vcQZRx30" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,8 +50,18 @@
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;CSS&quot;
+    ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\2_DEV\Desktop\site-confeitaria\static\css" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="site-confeitaria" />
@@ -126,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727196217873</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="site atualizado">
+      <option name="closed" value="true" />
+      <created>1727201845250</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727201845250</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
