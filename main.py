@@ -20,9 +20,10 @@ def sobre():
 def contato():
     return render_template("contato.html")
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+    if request.method == "GET":
+        return render_template("login.html")
 
 @app.route("/cadastro")
 def cadastro():

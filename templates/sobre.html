@@ -1,134 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Confeitaria Sempre Doce</title>
-    <style>
-        /* Importação de fontes e estilos globais */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sobre.css')}}">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 600;
-            color: #8B4513;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #8B4513;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: url('https://i.pinimg.com/originals/37/34/09/37340962d2b4a66aa807d83abf886f2c.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .hero-content {
-            z-index: 1;
-            max-width: 700px;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        /* Container */
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); /* Alterado para 0.8 de opacidade */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 2;
-        }
-
-        h2 {
-            text-align: center;
-            color:#8B4513;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            z-index: 2;
-        }
-    </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">Sempre Doce</div>
             <ul class="nav-links">
-               <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+                <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
                 <li><a href="{{ url_for('login') }}">Login</a></li>
                 <li><a href="{{ url_for('inicial') }}">Home</a></li>
                 <li><a href="{{ url_for('cardapio') }}">Cardápio</a></li>
@@ -141,16 +27,37 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Conheça a Confeitaria Sempre Doce</h1>
-                <p>Onde cada doce é feito com amor e dedicação.</p>
+                <h1>Confeitaria Sempre Doce</h1>
+                <p>Desde 1970, os melhores doces e produtos.</p>
             </div>
         </section>
 
         <section class="container">
             <h2>Sobre a Confeitaria</h2>
-            <p>A Confeitaria Sempre Doce é um lugar onde a paixão por doces se transforma em verdadeiras obras de arte. Fundada com o intuito de proporcionar momentos doces e memoráveis, oferecemos uma variedade de sobremesas feitas com ingredientes de alta qualidade.</p>
-            <p>Nossos confeiteiros são verdadeiros artistas, dedicando-se a cada receita com atenção aos detalhes e um compromisso inabalável com a qualidade. Cada bolo e doce é feito à mão, utilizando técnicas tradicionais e um toque de criatividade.</p>
-            <p>Além disso, acreditamos na importância de usar ingredientes frescos e locais sempre que possível, garantindo que cada produto que oferecemos seja não apenas delicioso, mas também de alta qualidade.</p>
+            <p>Fundada em 1970, a Confeitaria Sempre Doce tem sido sinônimo de qualidade e tradição, oferecendo os melhores
+                doces e produtos. Nossos confeiteiros são especialistas em transformar ingredientes frescos em obras de
+                arte culinárias, criando doces que trazem sabor e alegria a todos os momentos.</p>
+        </section>
+
+        <section class="container">
+            <h2>Nossa Equipe</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/564x/0e/cc/41/0ecc4171496ffa2ac05211007cf9a14f.jpg" alt="Chef Maria Silva">
+                    <h3>Beatriz</h3>
+                    <p>Chef de Confeitaria</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/736x/c0/50/b8/c050b8ec33539e36a3b474b8052b3948.jpg" alt="Assistente João Santos">
+                    <h3>Rafaela Oliveira</h3>
+                    <p>Assistente de Confeitaria</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/564x/ff/f3/ba/fff3bab05d1c994364b4724d5aba4ae8.jpg" alt="Decoradora Ana Souza">
+                    <h3>Julia Souza</h3>
+                    <p>Decoradora de Bolos</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -158,4 +65,5 @@
         <p>&copy; 2024 Confeitaria Sempre Doce. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>
