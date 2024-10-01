@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask (__name__)
 
@@ -24,6 +24,20 @@ def contato():
 def login():
     if request.method == "GET":
         return render_template("login.html")
+    elif request.method == "POST":
+        usuario = request.form.get("usuario")
+        senha = request.form.get("senha")
+
+        if usuario == "Ana Beatriz":
+            if senha == "250323":
+                return redirect(url_for('upload'))
+
+        return render_template("login.html")
+
+
+@app.route("/upload")
+def upload():
+    return render_template("upload.html")
 
 @app.route("/cadastro")
 def cadastro():
