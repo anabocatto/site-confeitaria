@@ -52,31 +52,6 @@ def cadastro():
     return render_template("cadastro.html")
 
 
-from flask import Flask, render_template, request, jsonify, session
-
-app = Flask(__name__)
-app.secret_key = 'alguma_chave_secreta'  # Substitua por uma chave secreta mais segura
-
-
-@app.route('/')
-def home():
-    return render_template('cardapio.html')
-
-
-@app.route('/adicionar', methods=['POST'])
-def adicionar_ao_carrinho():
-    data = request.get_json()
-    preco = data.get('preco')
-
-    if 'total' not in session:
-        session['total'] = 0
-
-    session['total'] += preco
-    return jsonify({'total': session['total']})
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 if __name__ == '__main__':
     app.run(debug=True)
